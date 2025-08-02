@@ -2,7 +2,7 @@
 
 A real-time earthquake visualization application that fetches data from the USGS Earthquake API and displays it on an interactive map with time-series animation capabilities.
 
-![Screenshot](/home/micah/Code/earthquakes/screenshot.png)
+![Screenshot](screenshot.png)
 
 ## Project Goals
 
@@ -20,10 +20,10 @@ A real-time earthquake visualization application that fetches data from the USGS
 - **Visual Encoding**: 
   - **Circle Size**: Proportional to earthquake magnitude
   - **Color Coding**: 
-    - =á Yellow (M0.0-2.9): Minor earthquakes
-    - =à Orange (M3.0-4.9): Light earthquakes  
+    - =ï¿½ Yellow (M0.0-2.9): Minor earthquakes
+    - =ï¿½ Orange (M3.0-4.9): Light earthquakes  
     - =4 Red (M5.0-6.9): Moderate to strong earthquakes
-    - =ã Purple (M7.0+): Major earthquakes
+    - =ï¿½ Purple (M7.0+): Major earthquakes
 - **Detailed Popups**: Click markers to see magnitude, location, time, and depth
 
 ### Animation Controls
