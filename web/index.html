@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Earthquake Visualization</title>
+    
+    <!-- Leaflet CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+          integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+          crossorigin=""/>
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Control Panel -->
+        <div id="controls">
+            <div class="control-group">
+                <label for="feedSelect">Data Feed:</label>
+                <select id="feedSelect">
+                    <option value="all_day">All Earthquakes - Past Day</option>
+                    <option value="all_week">All Earthquakes - Past Week</option>
+                    <option value="all_month">All Earthquakes - Past 30 Days</option>
+                    <option value="2.5_day">M2.5+ - Past Day</option>
+                    <option value="2.5_week">M2.5+ - Past Week</option>
+                    <option value="2.5_month">M2.5+ - Past 30 Days</option>
+                    <option value="4.5_day">M4.5+ - Past Day</option>
+                    <option value="4.5_week">M4.5+ - Past Week</option>
+                    <option value="4.5_month">M4.5+ - Past 30 Days</option>
+                    <option value="significant_day">Significant - Past Day</option>
+                    <option value="significant_week">Significant - Past Week</option>
+                    <option value="significant_month">Significant - Past 30 Days</option>
+                </select>
+                <button id="refreshBtn">Refresh Data</button>
+            </div>
+            
+            <div class="control-group">
+                <label for="speedControl">Animation Speed:</label>
+                <input type="range" id="speedControl" min="0.1" max="24" step="0.1" value="1">
+                <span id="speedValue">1h/s</span>
+            </div>
+            
+            <div class="control-group">
+                <button id="playBtn">Play</button>
+                <button id="pauseBtn">Pause</button>
+                <button id="resetBtn">Reset</button>
+            </div>
+            
+            <div class="control-group">
+                <div id="timeDisplay">Time: --</div>
+                <div id="earthquakeCount">Earthquakes: 0</div>
+            </div>
+        </div>
+
+        <!-- Map Container -->
+        <div id="map"></div>
+        
+        <!-- Loading Indicator -->
+        <div id="loading" class="hidden">Loading earthquake data...</div>
+    </div>
+
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+            integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+            crossorigin=""></script>
+    
+    <!-- Eel JS -->
+    <script src="/eel.js"></script>
+    
+    <!-- Custom JS -->
+    <script src="app.js"></script>
+</body>
+</html>
