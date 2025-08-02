@@ -2,6 +2,8 @@
 
 A real-time earthquake visualization application that fetches data from the USGS Earthquake API and displays it on an interactive map with time-series animation capabilities.
 
+![Screenshot](/home/micah/Code/earthquakes/screenshot.png)
+
 ## Project Goals
 
 - **Real-time Data Visualization**: Display earthquake data from the USGS on an interactive map
